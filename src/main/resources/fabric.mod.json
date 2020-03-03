@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "pling",
+	"version": "${version}",
+
+	"name": "Pling",
+	"description": "Plays a sound when Minecraft is finished loading.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Pling#readme",
+		"issues": "https://github.com/haykam821/Pling/issues"
+	},
+
+	"license": "MIT",
+	"icon": "assets/pling/icon.png",
+
+	"environment": "client",
+	"mixins": [
+		"pling.mixin.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	}
+}
