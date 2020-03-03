@@ -5,3 +5,14 @@
 [![Discord](https://img.shields.io/static/v1?style=popout&label=chat&message=discord&color=7289DA)](https://discord.gg/eXcffmW)
 
 Plays a sound when Minecraft is finished loading.
+
+Pling requires the [Fabric modloader](https://fabricmc.net/use/).
+
+## Installation
+
+1. Download Pling from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/pling/files) or [GitHub](https://github.com/haykam821/Pling/releases).
+2. Place the downloaded file in your `mods` folder.
+
+## Usage
+
+When Minecraft is finished loading (either on startup or from resource pack changes), a pling sound will play.
