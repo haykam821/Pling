@@ -14,7 +14,7 @@ import net.minecraft.sound.SoundEvents;
 public class MinecraftClientMixin {
 	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;init(Lnet/minecraft/client/MinecraftClient;II)V"))
 	public void plingOnResourceReloadDone(Screen screen, MinecraftClient client, int width, int height) {
-		PositionedSoundInstance sound = PositionedSoundInstance.master(SoundEvents.BLOCK_NOTE_BLOCK_PLING, 1.0F);
+		PositionedSoundInstance sound = PositionedSoundInstance.master(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0F);
 		MinecraftClient.getInstance().getSoundManager().play(sound);
 
 		screen.init(client, width, height);
