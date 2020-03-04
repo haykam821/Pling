@@ -13,6 +13,10 @@ Pling requires the [Fabric modloader](https://fabricmc.net/use/).
 1. Download Pling from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/pling/files) or [GitHub](https://github.com/haykam821/Pling/releases).
 2. Place the downloaded file in your `mods` folder.
 
+## Configuration
+
+The configuration can be edited with the `config/pling.json` file or using the [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) mod. Descriptions for each configuration option are available in-game when using Mod Menu.
+
 ## Usage
 
-When Minecraft is finished loading (either on startup or from resource pack changes), a pling sound will play.
+When Minecraft is finished loading (either on startup or from resource pack changes), a customizable pling sound will play.
