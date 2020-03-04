@@ -17,6 +17,14 @@
 	"icon": "assets/pling/icon.png",
 
 	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"io.github.haykam821.pling.Pling"
+		],
+		"modmenu": [
+			"io.github.haykam821.pling.config.ModMenuCompatibility"
+		]
+	},
 	"mixins": [
 		"pling.mixin.json"
 	],
