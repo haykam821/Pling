@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 @Mixin(SplashScreen.class)
-public class MinecraftClientMixin {
+public class SplashScreenMixin {
 	ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 
 	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;init(Lnet/minecraft/client/MinecraftClient;II)V"))
