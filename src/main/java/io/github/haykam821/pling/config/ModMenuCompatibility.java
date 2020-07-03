@@ -1,7 +1,6 @@
 package io.github.haykam821.pling.config;
 
-import java.util.function.Function;
-
+import io.github.prospector.modmenu.api.ConfigScreenFactory;
 import io.github.prospector.modmenu.api.ModMenuApi;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.fabricmc.api.EnvType;
@@ -16,7 +15,7 @@ public class ModMenuCompatibility implements ModMenuApi {
 	}
 
 	@Override
-	public Function<Screen, ? extends Screen> getConfigScreenFactory() {
+	public ConfigScreenFactory<Screen> getModConfigScreenFactory() {
 		return screen -> AutoConfig.getConfigScreen(ModConfig.class, screen).get();
 	}
 }
