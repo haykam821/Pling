@@ -16,4 +16,7 @@ public class ModConfig implements ConfigData {
 
 	@ConfigEntry.Gui.Tooltip(count = 2)
 	public boolean playWhenWorldLoaded = false;
+
+	@ConfigEntry.Gui.Tooltip(count = 3)
+	public boolean requireUnfocused = false;
 }

@@ -12,6 +12,8 @@ import net.minecraft.client.gui.screen.SplashScreen;
 public class SplashScreenMixin {
 	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/Screen;init(Lnet/minecraft/client/MinecraftClient;II)V"))
 	public void plingWhenResourcesReloaded(CallbackInfo ci) {
-		Pling.playLoadingSound();
+		if (Pling.hasProperFocus()) {
+			Pling.playLoadingSound();
+		}
 	}
 }

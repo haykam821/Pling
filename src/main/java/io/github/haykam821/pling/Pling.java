@@ -15,6 +15,7 @@ import net.minecraft.util.InvalidIdentifierException;
 import net.minecraft.util.registry.Registry;
 
 public class Pling implements ModInitializer {
+	private static final MinecraftClient CLIENT = MinecraftClient.getInstance();
 	private static final Logger LOGGER = LogManager.getLogger("Pling");
 	private static final ModConfig CONFIG = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new).getConfig();
 
@@ -27,8 +28,12 @@ public class Pling implements ModInitializer {
 		SoundEvent soundEvent = Pling.getLoadingSound();
 		if (soundEvent != null) {
 			PositionedSoundInstance sound = PositionedSoundInstance.master(soundEvent, Pling.getConfig().pitch);
-			MinecraftClient.getInstance().getSoundManager().play(sound);
+			CLIENT.getSoundManager().play(sound);
 		}
+	}
+
+	public static boolean hasProperFocus() {
+		return !CONFIG.requireUnfocused || !CLIENT.isWindowFocused();
 	}
 
 	public static SoundEvent getLoadingSound() {

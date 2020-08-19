@@ -12,7 +12,7 @@ import net.minecraft.client.MinecraftClientGame;
 public class MinecraftClientGameMixin {
 	@Inject(method = "onStartGameSession", at = @At("HEAD"))
 	private void plingWhenWorldLoaded(CallbackInfo ci) {
-		if (Pling.getConfig().playWhenWorldLoaded) {
+		if (Pling.hasProperFocus() && Pling.getConfig().playWhenWorldLoaded) {
 			Pling.playLoadingSound();
 		}
 	}
