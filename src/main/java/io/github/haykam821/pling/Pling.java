@@ -7,6 +7,8 @@ import io.github.haykam821.pling.config.ModConfig;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.InvalidIdentifierException;
@@ -19,6 +21,14 @@ public class Pling implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		return;
+	}
+
+	public static void playLoadingSound() {
+		SoundEvent soundEvent = Pling.getLoadingSound();
+		if (soundEvent != null) {
+			PositionedSoundInstance sound = PositionedSoundInstance.master(soundEvent, Pling.getConfig().pitch);
+			MinecraftClient.getInstance().getSoundManager().play(sound);
+		}
 	}
 
 	public static SoundEvent getLoadingSound() {

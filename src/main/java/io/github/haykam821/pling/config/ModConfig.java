@@ -13,4 +13,7 @@ public class ModConfig implements ConfigData {
 
 	@ConfigEntry.Gui.Tooltip
 	public float pitch = 1.0F;
+
+	@ConfigEntry.Gui.Tooltip(count = 2)
+	public boolean playWhenWorldLoaded = false;
 }

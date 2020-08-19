@@ -3,6 +3,7 @@
 	"package": "io.github.haykam821.pling.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"client": [
+		"MinecraftClientGameMixin",
 		"SplashScreenMixin"
 	],
 	"injectors": {
