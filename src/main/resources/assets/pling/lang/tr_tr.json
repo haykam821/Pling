@@ -1,0 +1,14 @@
+{
+	"text.autoconfig.pling.title": "Pling Ayarları",
+	"text.autoconfig.pling.option.sound": "Ses",
+	"text.autoconfig.pling.option.sound.@Tooltip": "Çalacak sesin tanımlayıcısı.",
+	"text.autoconfig.pling.option.pitch": "Ses Frekansı",
+	"text.autoconfig.pling.option.pitch.@Tooltip": "Çalacak sesin frekansı.",
+	"text.autoconfig.pling.option.playWhenWorldLoaded": "Bir Dünya Yüklendiğinde de Çal",
+	"text.autoconfig.pling.option.playWhenWorldLoaded.@Tooltip[0]": "Etkinleştirildiğinde, bir dünyanın yüklenmesi",
+	"text.autoconfig.pling.option.playWhenWorldLoaded.@Tooltip[1]": "tamamlandığında, yükleme bitiş sesi çalacak.",
+	"text.autoconfig.pling.option.requireUnfocused": "Pencerede Değilken Çal",
+	"text.autoconfig.pling.option.requireUnfocused.@Tooltip[0]": "Etkinleştirildiğinde, yüklemenin bitiş",
+	"text.autoconfig.pling.option.requireUnfocused.@Tooltip[1]": "sesi ancak oyun penceresinde",
+	"text.autoconfig.pling.option.requireUnfocused.@Tooltip[2]": "değilken çalacak."
+}
