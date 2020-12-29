@@ -2,6 +2,7 @@ package io.github.haykam821.pling;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.lwjgl.glfw.GLFW;
 
 import io.github.haykam821.pling.config.ModConfig;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
@@ -29,6 +30,18 @@ public class Pling implements ModInitializer {
 		if (soundEvent != null) {
 			PositionedSoundInstance sound = PositionedSoundInstance.master(soundEvent, Pling.getConfig().pitch);
 			CLIENT.getSoundManager().play(sound);
+		}
+	}
+
+	/**
+	 * Plays effects if the window has the proper focus.
+	 */
+	public static void playEffects() {
+		if (Pling.hasProperFocus()) {
+			Pling.playLoadingSound();
+			if (CONFIG.requestWindowAttention) {
+				GLFW.glfwRequestWindowAttention(CLIENT.getWindow().getHandle());
+			}
 		}
 	}
 

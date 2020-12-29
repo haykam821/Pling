@@ -19,4 +19,7 @@ public class ModConfig implements ConfigData {
 
 	@ConfigEntry.Gui.Tooltip(count = 3)
 	public boolean requireUnfocused = false;
+
+	@ConfigEntry.Gui.Tooltip(count = 4)
+	public boolean requestWindowAttention = false;
 }
