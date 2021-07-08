@@ -8,10 +8,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import io.github.haykam821.pling.Pling;
-import net.minecraft.client.gui.screen.SplashScreen;
+import net.minecraft.client.gui.screen.SplashOverlay;
 
-@Mixin(SplashScreen.class)
-public class SplashScreenMixin {
+@Mixin(SplashOverlay.class)
+public class SplashOverlayMixin {
 	@Shadow
 	@Final
 	private boolean reloading;

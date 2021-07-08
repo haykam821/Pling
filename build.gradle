@@ -31,6 +31,9 @@ dependencies {
 	mappings("net.fabricmc:yarn:${project.yarn_mappings}:v2")
 	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
 
+	// Fabric API
+	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}")
+
 	// Configuration
 	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}")
 	include("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}")
