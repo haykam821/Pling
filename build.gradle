@@ -16,11 +16,12 @@ repositories {
 		url = "https://maven.fabricmc.net/"
 	}
 	maven {
-		name = "CottonMC"
-		url = "https://server.bbkr.space/artifactory/libs-snapshot/"
+		name = "Shedaniel"
+		url = "https://maven.shedaniel.me/"
 	}
 	maven {
-		url = "https://dl.bintray.com/shedaniel/autoconfig1u/"
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
 	}
 	jcenter()
 }
@@ -31,13 +32,10 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
 
 	// Configuration
-	modImplementation("me.shedaniel.cloth:config-2:${project.clothconfig_version}")
-	include("me.shedaniel.cloth:config-2:${project.clothconfig_version}")
+	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}")
+	include("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}")
 
-	modImplementation("me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}")
-	include("me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}")
-
-	modImplementation("io.github.prospector:modmenu:${project.modmenu_version}")
+	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 }
 
 processResources {
