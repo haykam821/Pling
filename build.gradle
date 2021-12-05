@@ -36,8 +36,6 @@ dependencies {
 
 	// Configuration
 	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}")
-	include("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}")
-
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 }
 
