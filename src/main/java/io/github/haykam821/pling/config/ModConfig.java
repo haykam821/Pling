@@ -17,6 +17,9 @@ public class ModConfig implements ConfigData {
 	@ConfigEntry.Gui.Tooltip(count = 2)
 	public boolean playWhenWorldLoaded = false;
 
+	@ConfigEntry.Gui.Tooltip(count = 2)
+	public boolean playWhenWorldOptimized = false;
+
 	@ConfigEntry.Gui.Tooltip(count = 4)
 	public boolean playWhenResourcesReloaded = true;
 
