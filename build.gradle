@@ -1,5 +1,5 @@
 plugins {
-	id "fabric-loom" version "0.10-SNAPSHOT"
+	id "fabric-loom" version "1.0.12"
 	id "maven-publish"
 }
 
@@ -23,7 +23,6 @@ repositories {
 		name = "TerraformersMC"
 		url = "https://maven.terraformersmc.com/"
 	}
-	jcenter()
 }
 
 dependencies {
