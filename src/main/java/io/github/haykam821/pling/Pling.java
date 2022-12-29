@@ -10,7 +10,6 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.sound.PositionedSoundInstance;
-import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.InvalidIdentifierException;
@@ -52,7 +51,7 @@ public class Pling implements ModInitializer {
 	public static SoundEvent getLoadingSound() {
 		try {
 			Identifier soundId = new Identifier(CONFIG.sound);
-			return Registries.SOUND_EVENT.get(soundId);
+			return SoundEvent.of(soundId);
 		} catch (InvalidIdentifierException exception) {
 			LOGGER.warn("Invalid loading sound event ID: '{}'", CONFIG.sound);
 			return null;
