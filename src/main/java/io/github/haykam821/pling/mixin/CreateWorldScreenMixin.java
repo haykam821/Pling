@@ -18,7 +18,7 @@ public class CreateWorldScreenMixin {
 		}
 	}
 
-	@Inject(method = "create(Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/server/SaveLoader;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;", at = @At("TAIL"))
+	@Inject(method = "create(Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/world/level/LevelInfo;Lnet/minecraft/client/world/GeneratorOptionsHolder;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;", at = @At("TAIL"))
 	private static void plingWhenWorldRead(CallbackInfoReturnable<CreateWorldScreen> ci) {
 		if (Pling.getConfig().playWhenWorldCreationPrepared) {
 			Pling.playEffects();
