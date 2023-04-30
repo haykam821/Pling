@@ -6,11 +6,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import io.github.haykam821.pling.Pling;
-import net.minecraft.client.MinecraftClientGame;
+import net.minecraft.client.network.ClientPlayNetworkHandler;
 
-@Mixin(MinecraftClientGame.class)
-public class MinecraftClientGameMixin {
-	@Inject(method = "onStartGameSession", at = @At("HEAD"))
+@Mixin(ClientPlayNetworkHandler.class)
+public class ClientPlayNetworkHandlerMixin {
+	@Inject(method = "onGameJoin", at = @At("TAIL"))
 	private void plingWhenWorldLoaded(CallbackInfo ci) {
 		if (Pling.getConfig().playWhenWorldLoaded) {
 			Pling.playEffects();
