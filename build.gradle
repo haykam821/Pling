@@ -1,10 +1,7 @@
 plugins {
-	id "fabric-loom" version "1.4.1"
+	id "fabric-loom" version "1.6.12"
 	id "maven-publish"
 }
-
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -46,7 +43,13 @@ processResources {
 	}
 }
 
+java {
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 tasks.withType(JavaCompile) {
+	options.release = 8
 	options.encoding = "UTF-8"
 }
 
