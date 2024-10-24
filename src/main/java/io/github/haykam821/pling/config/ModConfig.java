@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvents;
 @Config.Gui.Background("minecraft:textures/block/note_block.png")
 public class ModConfig implements ConfigData {
 	@ConfigEntry.Gui.Tooltip
-	public String sound = SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP.getId().toString();
+	public String sound = SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP.id().toString();
 
 	@ConfigEntry.Gui.Tooltip
 	public float pitch = 1.0F;

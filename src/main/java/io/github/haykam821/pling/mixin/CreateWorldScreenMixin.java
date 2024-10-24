@@ -11,14 +11,14 @@ import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 
 @Mixin(CreateWorldScreen.class)
 public class CreateWorldScreenMixin {
-	@Inject(method = "create(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;)V", at = @At("TAIL"))
+	@Inject(method = "show(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;Ljava/util/function/Function;Lnet/minecraft/client/world/GeneratorOptionsFactory;Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/client/gui/screen/world/CreateWorldCallback;)V", at = @At("TAIL"))
 	private static void plingWhenWorldCreationPrepared(CallbackInfo ci) {
 		if (Pling.getConfig().playWhenWorldCreationPrepared) {
 			Pling.playEffects();
 		}
 	}
 
-	@Inject(method = "create(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/gui/screen/Screen;Lnet/minecraft/world/level/LevelInfo;Lnet/minecraft/client/world/GeneratorOptionsHolder;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screen/world/CreateWorldScreen;", at = @At("TAIL"))
+	@Inject(method = "create", at = @At("TAIL"))
 	private static void plingWhenWorldRead(CallbackInfoReturnable<CreateWorldScreen> ci) {
 		if (Pling.getConfig().playWhenWorldCreationPrepared) {
 			Pling.playEffects();

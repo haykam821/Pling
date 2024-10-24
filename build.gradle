@@ -44,12 +44,12 @@ processResources {
 }
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_1_8
-	targetCompatibility = JavaVersion.VERSION_1_8
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.withType(JavaCompile) {
-	options.release = 8
+	options.release = 21
 	options.encoding = "UTF-8"
 }
 
