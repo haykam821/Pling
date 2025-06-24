@@ -28,6 +28,13 @@
 	"mixins": [
 		"pling.mixin.json"
 	],
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://haykam.com/links/discord"
+			}
+		}
+	},
 
 	"depends": {
 		"fabricloader": ">=0.4.0",
