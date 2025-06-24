@@ -10,7 +10,8 @@
 	],
 	"contact": {
 		"homepage": "https://github.com/haykam821/Pling#readme",
-		"issues": "https://github.com/haykam821/Pling/issues"
+		"issues": "https://github.com/haykam821/Pling/issues",
+		"sources": "https://github.com/haykam821/Pling"
 	},
 
 	"license": "MIT",
